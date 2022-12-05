@@ -1,0 +1,127 @@
+.navbar {
+    background-color: var(--primary-color);
+    height: 70px;
+    width: 100%;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-family: 'Fredoka';
+    font-size: 2.8em;
+    font-weight: normal;
+    color: white;
+    cursor: pointer;
+
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.navbar-logo i {
+    color: var(--secondary-color);
+}
+
+.options-container {
+    font-size: 1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 45%;
+    font-family: 'Montserrat';
+    transition: all 0.25s ease;
+}
+
+.option-container {
+    padding: .25em .8em;
+    border-radius: 50px;
+}
+
+.options-container a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+.option-container:not(.active) a:before {
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 230, 0, 1);
+    width: 0%;
+    height: 3px;
+    left: 0;
+    bottom: 1px;
+    transform-origin: 50%;
+    transition: width 0.35s ease-out;
+}
+
+.option-container:not(.active) a:hover:before {
+    width: 100%;
+}
+
+.options-container .active {
+    background-color: rgba(255, 230, 0, var(--navoption-transparency));
+}
+
+.navbar .navbar-button {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar .navbar-button {
+        display: block;
+    }
+
+    .options-container {
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        z-index: 2;
+    }
+
+    body.show-menu .options-container {
+        left: 0;
+        
+    }
+    
+    body.show-menu {
+        overflow: hidden;
+    }
+
+    .hero-container:before {
+        content: '';
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 20%;
+        opacity: 0;
+        height: 100%;
+
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.25);
+        transition: opacity 0.35s 0.25s ease;
+    }
+
+    body.show-menu .hero-container:before {
+        opacity: 1;
+        left: 80%;
+
+        /* transition-delay: 0.35s; */
+    }
+
+    .navbar .options-container .option-container {
+        margin-left: 30px;
+        margin-bottom: 2em;
+        font-size: 1.5em;
+    }
+}

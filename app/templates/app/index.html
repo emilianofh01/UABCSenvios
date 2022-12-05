@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/home.css' %}">
+    <title>EnviosUABCS - Inicio</title>
+</head>
+
+<body class="">
+    <div class="container">
+        {% include 'app/includes/navbar.html' %} 
+
+        <div class="hero-container">
+            <div class="wrap">
+                <p>Envios <i>rapidos</i> y <i>seguros</i> <br> con <span><i>Envios</i>UABCS</span></p>
+            </div>
+        </div>
+        
+        <div class="container-content wrap">
+            <div class="container-offers">
+                <div class="card">
+                    <img src="{% static 'app/img/Banner.png' %}" alt="" srcset="">
+                </div>
+
+                <div class="card">
+                    <img src="{% static 'app/img/Banner.png' %}" alt="" srcset="">
+                </div>
+
+                <div class="card">
+                    <img src="{% static 'app/img/Banner.png' %}" alt="" srcset="">
+                </div>
+
+                <div class="card">
+                    <img src="{% static 'app/img/Banner.png' %}" alt="" srcset="">
+                </div>
+            </div>
+
+            <div class="container-ventajas">
+                <h1>La mejor opción para tus envios</h1>
+    
+                <div class="ventajas">
+                    <div class="opciones">
+                        <p>Rapidos</p>
+                        <img src="{% static 'app/img/camion.png' %}" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel.</p>
+                    </div>
+                    <div class="opciones">
+                        <p>Envios a toda la republica</p>
+                        <img src="{% static 'app/img/Caja.png' %} " alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel.</p>
+                    </div>
+                    <div class="opciones">
+                        <p>Seguros</p>
+                        <img src="{% static 'app/img/escudo.png' %}" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <script src="{% static 'app/js/main.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/acerca.css' %}">
+    <title>EnviosUABCS - Acerca</title>
+</head>
+
+<body class="">
+    <div class="container">
+        {% include app/includes/navbar.html %}
+
+        <div class="hero-container">
+            <div class="wrap">
+                <p>Nuestro <span><i>compromiso</i></span><br>esta contigo</p>
+            </div>
+        </div>
+
+        <div class="container-content wrap">
+            <div class="our-history">
+                <h1>Un poco de nuestra historia</h1>
+                <div class="founder">
+                    <img src="./src/img/founder.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac orci congue, eleifend ex
+                        quis, euismod purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+                        ac turpis egestas. Vivamus quis arcu hendrerit, hendrerit urna consectetur, semper metus.
+                        Maecenas condimentum feugiat aliquet. Praesent volutpat arcu quis felis rhoncus elementum. Donec
+                        sed venenatis magna. Morbi posuere venenatis ex.</p>
+                </div>
+            </div>
+
+            <div class="our-values">
+                <h1>Nuestros valores</h1>
+                <div class="values">
+                    <div class="value">
+                        <h2>Misión</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac orci congue, eleifend ex
+                            quis, euismod purus. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                            fames ac turpis egestas. Vivamus quis arcu hendrerit, hendrerit urna consectetur, semper
+                            metus. Maecenas condimentum feugiat aliquet. Praesent volutpat arcu quis felis rhoncus
+                            elementum. Donec sed venenatis magna. Morbi posuere venenatis ex.</p>
+                    </div>
+
+                    <div class="value">
+                        <h2>Visión</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac orci congue, eleifend ex
+                            quis, euismod purus. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                            fames ac turpis egestas. Vivamus quis arcu hendrerit, hendrerit urna consectetur, semper
+                            metus. Maecenas condimentum feugiat aliquet. Praesent volutpat arcu quis felis rhoncus
+                            elementum. Donec sed venenatis magna. Morbi posuere venenatis ex.</p>
+                    </div>
+
+                    <div class="value">
+                        <h2>Política de calidad</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac orci congue, eleifend ex
+                            quis, euismod purus. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                            fames ac turpis egestas. Vivamus quis arcu hendrerit, hendrerit urna consectetur, semper
+                            metus. Maecenas condimentum feugiat aliquet. Praesent volutpat arcu quis felis rhoncus
+                            elementum. Donec sed venenatis magna. Morbi posuere venenatis ex.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="./src/js/main.js"></script>
+</body>
+
+</html>

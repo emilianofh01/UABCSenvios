@@ -1,0 +1,88 @@
+.hero-container i {
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+.hero-container {
+    background: url(../img/Repartidor.png);
+    background-size: cover;
+}
+
+.our-history {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    font-family: 'Montserrat';
+}
+
+.our-history h1 {
+    margin-bottom: 40px;
+    font-size: 2.4em;
+}
+
+.founder {
+    display: inherit;
+    flex-direction: row;
+}
+
+.founder img {
+    width: 30%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.founder p {
+    font-size: 2em;
+    text-align: justify;
+}
+
+.our-values {
+    margin-top: 50px;
+    padding: 0 50px;
+    font-family: 'Montserrat';
+}
+
+.our-values h1 {
+    font-size: 2.4em;
+    text-align: center;
+}
+
+.value {
+    margin: 50px 0;
+}
+
+.value h2 {
+    position: relative;
+    font-size: 2.4em;
+    padding: 10px 25px;
+}
+
+.value h2:after {
+    left: -5px;
+    top: 5px;
+    content: '';
+    position: absolute;
+    background: url(../img/valuesIndicator.svg);
+    background-repeat: no-repeat;
+    width: 2em;
+    height: 2em;
+}
+
+.value p {
+    font-size: 2em;
+    text-align: justify;
+}
+
+@media screen and (max-width:851px) {
+    .founder {
+        flex-direction: column;
+    }
+
+    .founder img {
+        width: 100%;
+        border-radius: 20px;
+        margin-bottom: 5px;
+    }
+}

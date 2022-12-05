@@ -1,0 +1,84 @@
+.container-content {
+    font-family: 'Montserrat';
+    padding: 40px;
+}
+
+.how-it-work {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.how-it-work h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+}
+
+.how-it-work p {
+    font-size: 2.2em;
+}
+
+
+.container-prices {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container-prices > h1 {
+    align-self: center;
+    font-size: 2.8em;
+}
+
+.container-prices > p {
+    font-size: 2em;
+    font-weight: 500;
+    margin: 20px 0;
+    margin-bottom: 0;
+}
+
+.container-prices > .prices {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price > * {
+    margin: 10px 0;
+}
+
+.price p:nth-child(1) {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.price p:nth-child(3) {
+    font-size: 2em;
+}
+
+
+#CajaChica {
+    height: 10em;
+}
+
+#CajaMediana {
+    height: 15em;
+}
+
+#CajaGrande {
+    height: 20em;
+}
+
+@media screen and (max-width: 768px) {
+    .prices {
+        font-size: 7px;
+    }
+}

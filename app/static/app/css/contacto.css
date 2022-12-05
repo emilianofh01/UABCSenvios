@@ -1,0 +1,27 @@
+.hero-container i {
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+.hero-container {
+    background: url(../img/secretaria.png);
+    background-size: cover;
+}
+
+.contact-container {
+    width: 100%;
+    padding: 0 40px;
+    font-family: 'Montserrat';
+}
+
+.contact-container h1 {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 2.7em;
+    margin-bottom: 50px;
+}
+
+.contact-container p {
+    margin-top: 20px;
+    font-size: 2em;
+}

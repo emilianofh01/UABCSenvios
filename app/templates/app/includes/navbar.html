@@ -1,0 +1,21 @@
+<nav class="navbar">
+    <div class="wrap">
+        <h1 class="navbar-logo">Envios<i>UABCS</i></h1>
+        {% load static %}
+        <img class="navbar-button" src="{% static 'app/img/HamburgerMenu.svg' %}" alt="">
+        <div class="options-container mostrar">
+            <div class="option-container ">
+                <a title="Inicio" href="{% url 'inicio' %}" class="option">Inicio</a>
+            </div>
+            <div class="option-container">
+                <a title="Servicio" href="{% url 'servicios' %}" class="option">Servicios</a>
+            </div>
+            <div class="option-container active">
+                <a title="Acerca" href="{% url 'acerca' %}" class="option">Acerca</a>
+            </div>
+            <div class="option-container">
+                <a title="Contacto" href="{% url 'contacto' %}" class="option">Contacto</a>
+            </div>
+        </div>
+    </div>
+</nav>
