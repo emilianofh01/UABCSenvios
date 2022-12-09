@@ -21,6 +21,10 @@ def login(request):
 
 def register(request):
     formu= UserRegister()
+    if request.method=='POST':
+        formu= UserRegister(request.POST)
+        if formu.is_valid:
+            formu.save()
     ctx={'formu':formu}
     return render(request, 'app/register.html',ctx)
     
