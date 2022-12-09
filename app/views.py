@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import UserLoginForm 
 from .forms import UserRegister
+from django.contrib import messages
 # Create your views here.
 def index(request): 
     return render(request, 'app/index.html')
@@ -25,6 +26,7 @@ def register(request):
         formu= UserRegister(request.POST)
         if formu.is_valid:
             formu.save()
+            messages.success(request, 'Datos almacenados correctamente')
     ctx={'formu':formu}
     return render(request, 'app/register.html',ctx)
     
