@@ -5,34 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/main.css">
-    <link rel="stylesheet" href="./src/css/navbar.css">
-    <link rel="stylesheet" href="./src/css/service.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/service.css' %}">
     <title>EnviosUABCS - Servicios</title>
 </head>
 
 <body class="">
     <div class="container">
-        <nav class="navbar">
-            <div class="wrap">
-                <h1 class="navbar-logo">Envios<i>UABCS</i></h1>
-                <img class="navbar-button" src="./src/img/HamburgerMenu.svg" alt="">
-                <div class="options-container mostrar">
-                    <div class="option-container ">
-                        <a title="Inicio" href="/" class="option">Inicio</a>
-                    </div>
-                    <div class="option-container active">
-                        <a title="Servicio" href="/servicios.html" class="option">Servicio</a>
-                    </div>
-                    <div class="option-container">
-                        <a title="Acerca" href="/acerca.html" class="option">Acerca</a>
-                    </div>
-                    <div class="option-container">
-                        <a title="Contacto" href="/Contacto.html" class="option">Contacto</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        {% include 'app/includes/navbar.html' %} 
 
         <div class="hero-container">
             <div class="wrap">
@@ -55,19 +37,19 @@
                 <div class="prices">
                     <div class="price">
                         <p>$5.00 MXN</p>
-                        <img id="CajaChica" src="./src/img/paqueteChico.png" alt="">
+                        <img src="{% static 'app/img/paqueteChico.png' %}" id="CajaChica" alt="">
                         <p>0 - 5 Kg</p>
                     </div>
 
                     <div class="price">
                         <p>$10.00 MXN</p>
-                        <img id="CajaMediana"  src="./src/img/paqueteMediano.png" alt="">
+                        <img id="CajaMediana" src="{% static 'app/img/paqueteMediano.png' %}" alt="">
                         <p>6 - 10 Kg</p>
                     </div>
 
                     <div class="price">
                         <p>$15.00 MXN</p>
-                        <img id="CajaGrande" src="./src/img/paqueteGrande.png" alt="">
+                        <img id="CajaGrande" src="{% static 'app/img/paqueteGrande.png' %}" alt="">
                         <p>11 - 16 Kg</p>
                     </div>
                 </div>
@@ -76,7 +58,7 @@
 
 
     </div>
-    <script src="./src/js/main.js"></script>
+    <script src="{% static 'app/js/main.js' %}"></script>
 </body>
 
 </html>

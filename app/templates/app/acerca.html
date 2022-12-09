@@ -14,7 +14,7 @@
 
 <body class="">
     <div class="container">
-        {% include app/includes/navbar.html %}
+        {% include 'app/includes/navbar.html' %}
 
         <div class="hero-container">
             <div class="wrap">
@@ -70,7 +70,7 @@
 
 
     </div>
-    <script src="./src/js/main.js"></script>
+    <script src="{% static 'app/js/main.js' %}"></script>
 </body>
 
 </html>

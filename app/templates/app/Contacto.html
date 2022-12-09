@@ -5,34 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/css/main.css">
-    <link rel="stylesheet" href="./src/css/navbar.css">
-    <link rel="stylesheet" href="./src/css/contacto.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/contacto.css' %}">
     <title>EnviosUABCS - Inicio</title>
 </head>
 
 <body class="">
     <div class="container">
-        <nav class="navbar">
-            <div class="wrap">
-                <h1 class="navbar-logo">Envios<i>UABCS</i></h1>
-                <img class="navbar-button" src="./src/img/HamburgerMenu.svg" alt="">
-                <div class="options-container mostrar">
-                    <div class="option-container ">
-                        <a title="Inicio" href="/" class="option">Inicio</a>
-                    </div>
-                    <div class="option-container">
-                        <a title="Servicio" href="/servicios.html" class="option">Servicios</a>
-                    </div>
-                    <div class="option-container">
-                        <a title="Acerca" href="/acerca.html" class="option">Acerca</a>
-                    </div>
-                    <div class="option-container active">
-                        <a title="Contacto" href="/Contacto.html" class="option">Contacto</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        {% include 'app/includes/navbar.html' %} 
 
         <div class="hero-container">
             <div class="wrap">
@@ -55,7 +37,7 @@
 
 
     </div>
-    <script src="./src/js/main.js"></script>
+    <script src="{% static 'app/js/main.js' %}"></script>
 </body>
 
 </html>
