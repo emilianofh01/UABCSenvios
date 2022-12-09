@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .forms import UserLoginForm 
 from .forms import UserRegister
+from django.contrib import messages
+from django.contrib.auth import authenticate,login
 # Create your views here.
 def index(request): 
     return render(request, 'app/index.html')
@@ -16,6 +18,19 @@ def contacto(request):
 
 def login(request):
     form= UserLoginForm()
+    if request.method=='POST':
+        form=UserLoginForm(request.POST)
+        if form.is_valid:
+            username=form.cleaned_data['username']
+            password=form.cleaned_data['password']
+            user= authenticate(username='username', password='password')
+
+            if user is not None:
+                login(request,user)
+            else:
+                messages.error(request, "Usuario o contraseña no encontrados")
+
+
     ctx={'form':form}
     return render(request, 'app/login.html',ctx)
 
@@ -25,6 +40,7 @@ def register(request):
         formu= UserRegister(request.POST)
         if formu.is_valid:
             formu.save()
+            messages.success(request, 'Datos almacenados correctamente')
     ctx={'formu':formu}
     return render(request, 'app/register.html',ctx)
     

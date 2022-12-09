@@ -4,6 +4,7 @@
 # Ignora la carpeta node_modules
 node_modules
 .venv
+_pycache_
 
 # Ignora todos los archivos de texto
 *.txt

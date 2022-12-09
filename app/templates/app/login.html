@@ -13,11 +13,11 @@
 </head>
 <body>
     <div class="container">
-        {% include 'app/includes/navbar.html' %}
+        {% include 'app/includes/navbar.html' %} 
         <div>
             <h1>Iniciar sesión</h1>
             <div class="row">
-                <form action="">
+                <form method="POST">
                     {{form.as_div}}
                     <button>Iniciar sesión</button>
                 </form>
