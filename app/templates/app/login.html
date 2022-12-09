@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app/css/main.css' %}?v">
+    <link rel="stylesheet" href="{% static 'app/css/navbar.css' %}?v">
+    <link rel="stylesheet" href="{% static 'app/css/acerca.css' %}?v">
+    <title>EnviosUABCS - Iniciar Sesión</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+
+            {{form.as_div}}
+            <button>Iniciar sesión</button>
+
+        </div>
+
+    </div>
+</body>
