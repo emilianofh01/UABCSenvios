@@ -30,6 +30,14 @@
 .row>form>div>input {
     padding: 10px;
     padding-block: 10px;
+    background-color: rgb(0,0,0,.06);
+    border: 1px solid rgba(0, 0, 0, 0.148);
+    border-radius: 5px;
+    outline: 1px solid transparent;
+}
+
+.row>form>div>input:focus {
+    outline: 1px solid var(--primary-color);
 }
 
 .row>form>div>input:focus + label {
@@ -57,12 +65,22 @@
     border: none;
     background-color: var(--primary-color);
     color: white;
+    font-size: 1.5em;
     border-radius: 5px;
     font-weight: bold;
 }
 
+.row>div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .row>div>a {
-    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 15px;
 }
 
 .row > h1 {
