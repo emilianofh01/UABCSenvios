@@ -13,15 +13,19 @@
 </head>
 <body>
     <div class="container">
-
-        <div class="row">
-
-            {{form.as_div}}
-            <button>Iniciar sesión</button>
-
-        </div>
+        {% include 'app/includes/navbar.html' %} 
         <div>
-            <a href="{% url 'register_user' %}">Crear cuenta</a>
+            <h1>Iniciar sesión</h1>
+            <div class="row">
+                <form method="POST">
+                    {{form.as_div}}
+                    <button>Iniciar sesión</button>
+                </form>
+    
+            </div>
+            <div>
+                <a href="{% url 'register_user' %}">Crear cuenta</a>
+            </div>
         </div>
 
     </div>
