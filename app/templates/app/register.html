@@ -9,16 +9,23 @@
     <link rel="stylesheet" href="{% static 'app/css/main.css' %}?v">
     <link rel="stylesheet" href="{% static 'app/css/navbar.css' %}?v">
     <link rel="stylesheet" href="{% static 'app/css/acerca.css' %}?v">
+    <link rel="stylesheet" href="{% static 'app/css/registroSesion.css' %}?v">
     <title>EnviosUABCS - Registrarse</title>
 </head>
+
 <body>
     <div class="container">
-
-        <div class="row">
-            <form action="">
-                {{formu.as_div}}
-                <button>Registrarse</button>
-            </form>
+        {% include 'app/includes/navbar.html' with opcion='iniciarsesion' %}
+        <div class="formlogin-container">
+            <div class="row">
+                <h1>Registro</h1>
+                <form action="">
+                    {{formu.as_div}}
+                </form>
+                <div>
+                    <button>Registrarse</button>
+                </div>
+            </div>
 
         </div>
 

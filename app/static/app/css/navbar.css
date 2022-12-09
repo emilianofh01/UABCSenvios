@@ -24,6 +24,10 @@
     background-color: rgba(255, 230, 0, var(--navoption-transparency));
 }
 
+.login-btn.active {
+    background-color: rgba(255, 230, 0, var(--navoption-transparency));
+}
+
 .login-btn a {
     color: white;
     text-decoration: none;

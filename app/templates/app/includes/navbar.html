@@ -19,7 +19,7 @@
             </div>
         </div>
         
-        <div class="login-btn">
+        <div class="login-btn {% if opcion == 'iniciarsesion'%}active{% endif %}">
             <a title="login" href="{% url 'login_user' %}">Iniciar sesion</a>
         </div>
     </div>
