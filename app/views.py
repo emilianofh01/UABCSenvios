@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import UserLoginForm 
+from .forms import UserRegister
 # Create your views here.
 def index(request): 
     return render(request, 'app/index.html')
@@ -18,4 +19,8 @@ def login(request):
     ctx={'form':form}
     return render(request, 'app/login.html',ctx)
 
+def register(request):
+    formu= UserRegister()
+    ctx={'formu':formu}
+    return render(request, 'app/register.html',ctx)
     
