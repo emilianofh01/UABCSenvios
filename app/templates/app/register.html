@@ -9,19 +9,16 @@
     <link rel="stylesheet" href="{% static 'app/css/main.css' %}?v">
     <link rel="stylesheet" href="{% static 'app/css/navbar.css' %}?v">
     <link rel="stylesheet" href="{% static 'app/css/acerca.css' %}?v">
-    <title>EnviosUABCS - Iniciar Sesión</title>
+    <title>EnviosUABCS - Registrarse</title>
 </head>
 <body>
     <div class="container">
 
         <div class="col">
 
-            {{form.as_div}}
-            <button>Iniciar sesión</button>
+            {{formu.as_div}}
+            <button>Registrarse</button>
 
-        </div>
-        <div>
-            <a href="{% url 'register_user' %}">Crear cuenta</a>
         </div>
 
     </div>
