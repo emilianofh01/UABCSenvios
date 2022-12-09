@@ -8,6 +8,32 @@
     align-items: center;
 }
 
+.login-btn {
+    height: 100%;
+    padding: 1em;
+    background-color: #380f63;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: all ease 0.25s;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: rgba(255, 230, 0, var(--navoption-transparency));
+}
+
+.login-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar > .wrap {
+    align-items: center;
+    display: flex;
+}
+
 .navbar-logo {
     font-family: 'Fredoka';
     font-size: 2.8em;
@@ -69,6 +95,8 @@
 .navbar .navbar-button {
     display: none;
 }
+
+
 
 @media screen and (max-width: 768px) {
     .navbar .navbar-button {

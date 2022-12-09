@@ -38,7 +38,9 @@ i {
     display: inherit;
     justify-content: space-between;
     width: 90%;
+    align-items: center;
     padding: 0 20px;
+    
     transition: 0.2s;
 }
 
