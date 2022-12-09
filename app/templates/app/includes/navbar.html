@@ -5,16 +5,16 @@
         
         <img class="navbar-button" src="{% static 'app/img/HamburgerMenu.svg' %}" alt="">
         <div class="options-container mostrar">
-            <div class="option-container ">
+            <div class="option-container {% if opcion == 'inicio' %}active {% endif %}">
                 <a title="Inicio" href="{% url 'inicio' %}" class="option">Inicio</a>
             </div>
-            <div class="option-container">
-                <a title="Servicio" href="{% url 'servicios' %}" class="option">Servicios</a>
+            <div class="option-container {% if opcion == 'servicio' %}active {% endif %}">
+                <a title="Servicio" href="{% url 'servicio' %}" class="option">Servicios</a>
             </div>
-            <div class="option-container active">
+            <div class="option-container {% if opcion == 'acerca' %}active {% endif %}">
                 <a title="Acerca" href="{% url 'acerca' %}" class="option">Acerca</a>
             </div>
-            <div class="option-container">
+            <div class="option-container {% if opcion == 'contacto' %}active {% endif %}">
                 <a title="Contacto" href="{% url 'contacto' %}" class="option">Contacto</a>
             </div>
         </div>
