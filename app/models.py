@@ -8,5 +8,5 @@ class Momento(models.Model):
     create_at= models.DateTimeField(default=datetime.now, blank=True)
     lat= models.DecimalField (max_digits=18, decimal_places=14, blank=True)
     lon= models.DecimalField (max_digits=18, decimal_places=14, blank=True)
-    user_id= models.ForeignKey(settings.AUTH.USER.MODEL, on_delete=models.CASCADE)
+    user_id= models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
