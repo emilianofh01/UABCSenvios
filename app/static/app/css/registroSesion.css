@@ -4,6 +4,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.formlogin-container * {
     font-family: "Montserrat";
 }
 
@@ -34,28 +37,24 @@
     border: 1px solid rgba(0, 0, 0, 0.148);
     border-radius: 5px;
     outline: 1px solid transparent;
-    transition: all ease ;
+    transition: all ease 0.25s;
 }
-
-.row>form>div>input:focus {
-    outline: 1px solid var(--primary-color);
-}
-
-.row>form>div>input:focus + label {
-    top: 0;
-
-}
-
 
 .row>form>div>label {
     left: 10px;
-    position: absolute;
+    /* position: absolute; */
     font-size: 1.3em;
     color: rgba(0, 0, 0, 0.36);
     font-weight: bold;
 }
 
+.row>form>div>input:focus + label {
+    background-color: red !important;
+}
 
+.row>form>div>input:focus {
+    outline: 1px solid var(--primary-color);
+}
 
 .row>form>button {
     padding: 20px;
@@ -68,14 +67,13 @@
     color: white;
     font-size: 1.5em;
     border-radius: 5px;
-    transition-duration: 0.4s;
+    transition: all ease 0.25s;
     font-weight: bold;
     cursor: pointer;
 }
 .row>form>button:hover{
 
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-
+    box-shadow: 0px 2px 7px 2px rgb(0 0 0 / 25%);
 }
 .row>div {
     width: 100%;
