@@ -17,20 +17,21 @@ def acerca(request):
 def contacto(request): 
     return render(request, 'app/contacto.html')
 
-def login(request):
+def login_user(request):
     form= UserLoginForm()
     if request.method=='POST':
         form=UserLoginForm(request.POST)
         if form.is_valid():
             username=form.cleaned_data['username']
             password=form.cleaned_data['password']
-            user= authenticate(username='username', password='password')
+            user= authenticate(username=username, password=password)
 
             if user is not None:
                 login(request,user)
+                print(form.data.values())
                 return redirect('inicio')
             else:
-                messages.error(request, "Usuario o contraseña no encontrados")
+                messages.error(request, 'Usuario o contraseña no encontrados')
 
 
     ctx={'form':form}
