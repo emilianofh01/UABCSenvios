@@ -36,7 +36,7 @@ def login_user(request):
             if user is not None:
                 login(request,user)
                 print(form.data.values())
-                return redirect('inicio')
+                return redirect('panel')
             else:
                 messages.error(request, 'Usuario o contraseña no encontrados')
 
