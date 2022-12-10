@@ -45,7 +45,7 @@ def login_user(request):
     return render(request, 'app/login.html',ctx)
 
 def register(request):
-    if request.is_authenticated:
+    if request.user.is_authenticated:
         return redirect("panel")
     formu= UserRegister()
     if request.method=='POST':
