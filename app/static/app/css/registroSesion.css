@@ -34,6 +34,7 @@
     border: 1px solid rgba(0, 0, 0, 0.148);
     border-radius: 5px;
     outline: 1px solid transparent;
+    transition: all ease ;
 }
 
 .row>form>div>input:focus {
