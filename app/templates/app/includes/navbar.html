@@ -20,7 +20,7 @@
         </div>
         
         <div class="login-btn {% if opcion == 'iniciarsesion'%}active{% endif %}">
-            <a title="login" href="{% url 'login_user' %}">Iniciar sesion</a>
+            <a title="login" href="{% url 'login_user' %}">{%if user.is_authenticated%} Abrir panel {%else%} Iniciar sesion{%endif%}</a>
         </div>
     </div>
 </nav>

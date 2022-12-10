@@ -19,6 +19,9 @@ from app import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('app.urls')),
+    path('', views.index, name='inicio'),
+    path('acerca/', views.acerca, name='acerca'),
+    path('servicios/', views.servicio, name='servicio'),
+    path('contacto/', views.contacto, name='contacto'),
+    path('auth/', include('app.urls')),
 ]
