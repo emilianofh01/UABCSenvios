@@ -17,7 +17,14 @@ def acerca(request):
 def contacto(request): 
     return render(request, 'app/contacto.html')
 
+def panel(request):
+    if request.user.is_authenticated: 
+        return render(request, 'app/panel.html')
+    return redirect('login_user')
+
 def login_user(request):
+    if request.user.is_authenticated:
+        return redirect("panel")
     form= UserLoginForm()
     if request.method=='POST':
         form=UserLoginForm(request.POST)
@@ -38,6 +45,8 @@ def login_user(request):
     return render(request, 'app/login.html',ctx)
 
 def register(request):
+    if request.is_authenticated:
+        return redirect("panel")
     formu= UserRegister()
     if request.method=='POST':
         formu= UserRegister(request.POST)

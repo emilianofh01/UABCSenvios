@@ -2,7 +2,7 @@
 <nav class="navbar">
     <div class="wrap">
         <h1 class="navbar-logo">Envios<i>UABCS</i></h1>
-        
+
         <img class="navbar-button" src="{% static 'app/img/HamburgerMenu.svg' %}" alt="">
         <div class="options-container mostrar">
             <div class="option-container {% if opcion == 'inicio' %}active {% endif %}">
@@ -18,9 +18,12 @@
                 <a title="Contacto" href="{% url 'contacto' %}" class="option">Contacto</a>
             </div>
         </div>
-        
-        <div class="login-btn {% if opcion == 'iniciarsesion'%}active{% endif %}">
-            <a title="login" href="{% url 'login_user' %}">{%if user.is_authenticated%} Abrir panel {%else%} Iniciar sesion{%endif%}</a>
-        </div>
+        {% if user.is_authenticated%}
+            <a class="login-btn {% if opcion == 'iniciarsesion'%}active{% endif %}" title="login" href="{% url 'panel' %}">
+        {%else%}
+            <a class="login-btn {% if opcion == 'iniciarsesion'%}active{% endif %}" title="login" href="{% url 'login_user' %}">
+        {%endif%}
+            {%if user.is_authenticated%} Abrir panel {%else%}Enviar paquete{%endif%}
+        </a>
     </div>
 </nav>
