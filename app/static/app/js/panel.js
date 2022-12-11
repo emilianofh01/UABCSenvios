@@ -17,7 +17,7 @@ searchBar.addEventListener('input', () => {
                         </div>
                     </div>
                     <div>
-                        <p>$${element.precio}MXN</p>
+                        <p>${element.precio}</p>
                     </div>
                 </div>
                 `;
