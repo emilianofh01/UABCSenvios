@@ -33,8 +33,22 @@ function init (){
         const {latlng: {
             lat,lng
         }} = e;
-        console.log(lat, lng);
-        L.marker([lat, lng]).addTo(map).bindPopup("Esto es una marca")
+
+        console.log(array.length)
+        if(array.length < 2) {
+            array.push([lat, lng]);
+            L.marker([lat, lng]).addTo(map).bindPopup("Esto es una marca")
+
+            if (array.length == 2) {
+                let prices = document.querySelectorAll(".dron > div > p ");
+                
+                prices.forEach(e => {
+                    const value = e.innerHTML;
+                    e.innerHTML = "$" + Math.round((distanceKM(array[0], array[1])) * value) + "MXN";
+                })
+            }
+        } 
+        
 
     });
 
@@ -93,7 +107,7 @@ function init (){
                         </div>
                     </div>
                     <div>
-                        <p>$${element.precio}MXN</p>
+                        <p>${element.precio}</p>
                     </div>
                 </div>
                 `;
