@@ -57,8 +57,32 @@ function init (){
         }
     };
 
+    drones.getAll({nombre: searchBar.value})
+        .then(e => {
+            console.log(e.data)
+            drone_list.innerHTML = "";
+            e.data.forEach(element => {
+                drone_list.innerHTML += `
+                <div class="dron">
+                    <div>
+                        <img src="${window.BaseimgDrones + element.icono}" alt="">
+                        <div>
+                            <h1>${element.nombre}</h1>
+                            <p>${element.desc}</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>$${element.precio}MXN</p>
+                    </div>
+                </div>
+                `;
+            });
+        })
 
+}
 
+function updatePrices(km) {
+    
 }
 
 window.addEventListener('load', init);

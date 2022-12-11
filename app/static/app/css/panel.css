@@ -68,10 +68,11 @@
 .dron {
     width: 90%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background-color: white;
     padding-block: 15px;
+    padding-inline: 15px;
     border-radius: 10px;
     cursor: pointer;
     border: 2px solid transparent;
@@ -90,6 +91,10 @@
 .dron > div > div {
     flex-direction: column;
     justify-content: center;
+}
+
+.dron > div > div > p {
+    margin-right: 10px;
 }
 
 .dron > div > p {
