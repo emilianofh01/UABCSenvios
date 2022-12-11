@@ -11,7 +11,17 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class DronSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Dron
-        fields = '__all__'
+        fields = [
+            'inventario',
+            'velocidad',
+            'nombre',
+            'desc',
+            'peso_maximo',
+            'precio',
+            'icono',
+            'id',
+            'url'
+        ]
         
 class EnvioSerializer(serializers.HyperlinkedModelSerializer):
     dron_id = serializers.PrimaryKeyRelatedField(many=False, read_only=False,queryset=Dron.objects.all())

@@ -106,7 +106,7 @@ function init (){
             }, true);
             return axios.get("envio/" + window.toQueryParams(filter))
         },
-        getAll(){
+        getAllByMe(){
             return axios.get("envio/hechos_por_mi/")
         },
         add(elem={}){
