@@ -1,3 +1,24 @@
+function distance(t, e) {
+    var i = Math.PI / 180
+      , n = t[0] * i
+      , o = e[0] * i
+      , s = Math.sin((e[0] - t[0]) * i / 2)
+      , e = Math.sin((e[1] - t[1]) * i / 2)
+      , t = s * s + Math.cos(n) * Math.cos(o) * e * e
+      , i = 2 * Math.atan2(Math.sqrt(t), Math.sqrt(1 - t));
+    return 6371e3 * i
+}
+function distanceKM(t, e) {
+    var i = Math.PI / 180
+      , n = t[0] * i
+      , o = e[0] * i
+      , s = Math.sin((e[0] - t[0]) * i / 2)
+      , e = Math.sin((e[1] - t[1]) * i / 2)
+      , t = s * s + Math.cos(n) * Math.cos(o) * e * e
+      , i = 2 * Math.atan2(Math.sqrt(t), Math.sqrt(1 - t));
+    return 6371 * i
+}
+
 function init (){
     let array = [];
 
@@ -78,6 +99,13 @@ function init (){
                 `;
             });
         })
+    window.envios = {
+        getAll(filter = {}){
+            filter = remapKeys(filter, {
+            }, true);
+            return axios.get("envio/" + window.toQueryParams(filter))
+        },
+    }
 
 }
 

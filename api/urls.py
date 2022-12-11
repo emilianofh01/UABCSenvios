@@ -5,7 +5,8 @@ from api.viewsets import *
 
 router = routers.DefaultRouter()
 router.register(r'user', UserViewSet)
-router.register(r'dron', DroneViewSet)
+router.register(r'dron', DronViewSet)
+router.register(r'envio', EnvioViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
