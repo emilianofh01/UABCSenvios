@@ -68,6 +68,7 @@
 
 .envios_list{
     transition: .25s;
+    background-color: white;
 }
 
 .envios_btn{
