@@ -17,5 +17,8 @@ function init (){
         L.marker([lat,lng]).addTo(map);
 
     });
+
+    axios.defaults.withCredentials = true;
+    axios.defaults.baseURL = "http://localhost:8000/api/";
 }
 window.addEventListener('load', init);

@@ -24,4 +24,5 @@ urlpatterns = [
     path('servicios/', views.servicio, name='servicio'),
     path('contacto/', views.contacto, name='contacto'),
     path('auth/', include('app.urls')),
+    path('api/', include('api.urls')),
 ]
