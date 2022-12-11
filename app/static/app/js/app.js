@@ -113,12 +113,30 @@ function init (){
                 `;
             });
         })
+        
     window.envios = {
         getAll(filter = {}){
             filter = remapKeys(filter, {
             }, true);
             return axios.get("envio/" + window.toQueryParams(filter))
         },
+        getAll(){
+            return axios.get("envio/hechos_por_mi/")
+        },
+        add(elem={}){
+            return axios.post("envio/", elem);
+            /*
+            {
+                "dron_id": 1,
+                "lat_inicio": 24.116026,
+                "lon_inicio": -110.32172,
+                "hora_inicio": "2022-12-10 20:57:00",
+                "lat_fin": 24.116695,
+                "lon_fin": -110.309222,
+                "hora_fin": "2022-12-10 21:20:00"
+            }
+            */
+        }
     }
 
 }
