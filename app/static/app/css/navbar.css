@@ -147,8 +147,6 @@
     body.show-menu .hero-container:before {
         opacity: 1;
         left: 80%;
-
-        /* transition-delay: 0.35s; */
     }
 
     .navbar .options-container .option-container {
