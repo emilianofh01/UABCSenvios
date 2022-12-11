@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework.request import Request
 from rest_framework import viewsets
 from app.models import Dron
-from api.filters import *
+from api.filters import DronesFilter
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -19,4 +19,5 @@ class UserViewSet(viewsets.ModelViewSet):
 
 class DroneViewSet(viewsets.ModelViewSet):
     queryset = Dron.objects.all()
+    filterset_class = DronesFilter
     serializer_class = DronSerializer
