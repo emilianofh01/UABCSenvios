@@ -16,6 +16,7 @@ class Dron(models.Model):
     nombre=models.CharField(max_length=120)
     desc=models.CharField(max_length=3200)
     peso_maximo=models.FloatField()
+    precio=models.FloatField(default=0)
     icono=models.CharField(max_length=120)
 
 class Envio(models.Model):

@@ -6,4 +6,7 @@ class DronesFilter(filters.FilterSet):
         model = Dron
         fields = {
             'nombre': ['icontains'],
+            'inventario': ['gt', 'lt'],
+            'peso_maximo': ['gt', 'lt', 'gte', 'lte'],
+            'velocidad': ['gt', 'lt', 'gte', 'lte'],
         }

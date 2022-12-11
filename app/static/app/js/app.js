@@ -37,8 +37,23 @@ function init (){
 
     window.drones = {
         getAll(filter = {}){
-            filter = remapKeys(filter, {nombre: "nombre__icontains"}, true);
+            filter = remapKeys(filter, {
+                nombre: "nombre__icontains",
+                inventario_menor: "inventario__lt",
+                peso_maximo_menor: "peso_maximo__lt",
+                velocidad_menor: "velocidad__lt",
+                inventario_mayor: "inventario__gt",
+                peso_maximo_mayor: "peso_maximo__gt",
+                velocidad_mayor: "velocidad__gt",
+                peso_maximo_mayor_igual: "peso_maximo__gte",
+                velocidad_mayor_igual: "velocidad__gte",
+                peso_maximo_menor_igual: "peso_maximo__lte",
+                velocidad_menor_igual: "velocidad__lte",
+            }, true);
             return axios.get("dron/" + window.toQueryParams(filter))
+        },
+        get(id) {
+            return axios.get(`dron/${id}/`);
         }
     };
 
