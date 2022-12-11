@@ -4,7 +4,7 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.request import Request
 from rest_framework import viewsets
-from api.models import Dron
+from app.models import Dron
 from api.filters import *
 
 
