@@ -17,7 +17,13 @@ class UserViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer_class()(request.user)
         return Response(serializer.data)
 
-class DroneViewSet(viewsets.ModelViewSet):
+class DronViewSet(viewsets.ModelViewSet):
     queryset = Dron.objects.all()
     filterset_class = DronesFilter
     serializer_class = DronSerializer
+
+    
+class EnvioViewSet(viewsets.ModelViewSet):
+    queryset = Envio.objects.all()
+    #filterset_class = DronesFilter
+    serializer_class = EnvioSerializer
