@@ -27,3 +27,12 @@ class EnvioViewSet(viewsets.ModelViewSet):
     queryset = Envio.objects.all()
     #filterset_class = DronesFilter
     serializer_class = EnvioSerializer
+    
+    @action(methods=['get'], detail=False)
+    def hechos_por_mi(self, request):
+        data = Envio.objects.filter(user_id=request.user.id)
+        serializer_context = {
+            request: request
+        }
+        serializer = self.get_serializer_class()(instance = data, many = True, read_only=True)
+        return Response(serializer.data)

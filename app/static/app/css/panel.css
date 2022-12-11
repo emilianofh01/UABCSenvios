@@ -19,6 +19,9 @@
 .drone_list-container {
     height: 100%;
     width: 600px;
+    
+    display: flex;
+    flex-direction: column;
 }
 
 .drone_list-search_container {
@@ -52,13 +55,31 @@
     
 }
 
-.drone_list {
+.drone_list, .envios_list {
     width: 100%;
-    height: calc(100% - 70px);
+    /*height: calc(100% - 70px);*/
+    flex: 1;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
+}
+
+.envios_list{
+    transition: .25s;
+}
+
+.envios_btn{
+    cursor: pointer;
+    user-select: none;
+}
+
+.envios_list.hidden{
+    overflow: hidden;
+    height: 0;
+    flex: 0;
+    padding: 0;
 }
 
 .option-container:not(.active) a:hover:before {
